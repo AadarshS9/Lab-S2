@@ -44,33 +44,49 @@ void main()
 			case 2:
 			{
 				struct node *temp=head;
+				
+				if(head==NULL)
+				{
+					printf("Nothing to delete");
+					break;
+				}
+				
 				printf("Enter position of data: ");
 				scanf("%d",&entry);
-				/*count=0;pos=head;
+				count=0;pos=head;
 				while(pos!=NULL)
 				{
 					pos=pos->next;
 					count++;
-				}*/
+				}
 				
-				if(entry==0)
+				if(entry>count+1)
+				{
+					printf("Out of range ");
+					break;
+				}
+				
+				else if(entry==0)
 				{
 					head=head->next;
 					temp->next=NULL;
 					free(temp);
+					break;
 				}
-				/*else if(entry==count)
+				
+				else if(entry==count-1)
 				{
 					for(i=0;i<entry-1;i++)
 					{
 						temp=temp->next;
 					}
-					struct node *tail=temp;
-					struct node *del=temp->next;
-					temp->next=temp->next->next;
-					del->next=NULL;
-					free(del);
-				}*/
+					tail=temp;
+					temp=tail->next;
+					tail->next=NULL;
+					printf("Deleted element is %d",temp->data);
+					free(temp);
+					break;
+				}
 				else
 				{
 					for(i=0;i<entry-1;i++)
