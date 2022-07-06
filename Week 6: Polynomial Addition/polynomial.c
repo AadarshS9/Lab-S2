@@ -1,4 +1,4 @@
-/*Polynomial Addition using Linked LIst*/
+/*Polynomial Addition using Linked List*/
 #include<stdio.h>
 #include<stdlib.h>
 
