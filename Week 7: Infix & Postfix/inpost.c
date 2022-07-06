@@ -4,8 +4,7 @@
 #include<string.h>
 #include<ctype.h>
 
-#define N 20
-char stack[N];
+char stack[100];
 int top=-1;
 
 int isEmpty()
@@ -123,7 +122,7 @@ void InfixToPostfix(char infix_exp[], char postfix_exp[])
 		item = infix_exp[i]; 
 	} 
 	
-	if(top>0)
+	if(top>100)
 	{
 		printf("\nInvalid infix Expression.\n");        
 		getchar();
@@ -139,7 +138,7 @@ void main()
 	
 	while(1)
     {
-		char infix[N], postfix[N];
+		char infix[100], postfix[100];
 		int ch;
 		printf("\nMENU");
 		printf("\n1.Enter Infix Expression\t\t2. Convert Infix to Postfix\t\t3.Exit\t");
