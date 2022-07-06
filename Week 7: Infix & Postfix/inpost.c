@@ -13,7 +13,7 @@ int isEmpty()
 }
 int isFull()
 {
-    return top == N-1;
+    return top == 100-1;
 }
 
 char peek()
