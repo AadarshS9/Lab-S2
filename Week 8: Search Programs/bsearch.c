@@ -18,8 +18,8 @@ int main()
     
     while(1)
     {
-		int size,i,ch,low,mid,high;
-		long int limit,key;
+		int i,ch,low,mid,high;
+		long int size,limit,key;
 		printf("\n1.Create list size and limit\t\t2.Generate Random Numbers\t\t3. Search\t\t4.Exit\t");
 		printf("\nEnter your choice: ");
 		scanf("%d",&ch);
