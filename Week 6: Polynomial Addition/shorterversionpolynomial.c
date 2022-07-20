@@ -12,12 +12,11 @@ struct node
 void create(struct node *input,int maxp)
 {	
 	int size,i;
-	for(i=maxp;i>0;i--)
+	for(i=maxp;i>=0;i--)
 	{
-		printf("Kindly Enter Term %d Coefficient: ",i);
+		printf("Kindly Enter Term x^%d Coefficient: ",i);
 		scanf("%d",&input->coefficient);
-		printf("Kindly Enter Term %d Power: ",i);
-		scanf("%d",&input->power);
+		input->power=i;
 		input->next=(struct node*)malloc(sizeof(struct node));
 		input=input->next;
 		input->next=NULL;
@@ -138,4 +137,3 @@ void main()
 	printf("\n");               		
            
 }
-
