@@ -12,7 +12,7 @@ struct node
 void create(struct node *input,int maxp)
 {	
 	int size,i;
-	for(i=maxp;i>=0;i--)
+	for(i=maxp;i>0;i--)
 	{
 		printf("Kindly Enter Term x^%d Coefficient: ",i);
 		scanf("%d",&input->coefficient);
